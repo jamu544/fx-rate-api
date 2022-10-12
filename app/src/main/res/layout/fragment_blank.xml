@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BlankFragment">
+
+    <TextView
+        android:id="@+id/fxTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#286F24"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="@string/fx_trade"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/editTextAustralianDollar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#ECEEE8"
+        android:hint="@string/australian_dollar"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/editTextEuro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#ECEEE8"
+        android:hint="@string/euro"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/editTextBritishPound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#ECEEE8"
+        android:hint="@string/british_pound_sterling"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/editTextJapaniesYen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#ECEEE8"
+        android:hint="@string/japanese_yen"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btnFxRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/submit_fxrate" />
+
+
+
+
+</LinearLayout>
