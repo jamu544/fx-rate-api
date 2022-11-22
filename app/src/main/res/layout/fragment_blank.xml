@@ -1,73 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".BlankFragment">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:id="@+id/fxTextView"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#286F24"
-        android:gravity="center_horizontal"
-        android:padding="10dp"
-        android:text="@string/fx_trade"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+        android:layout_height="match_parent"
+        tools:context=".view.BlankFragment">
+
+        <TextView
+            android:id="@+id/textViewFxMarket"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/fxmarketapi"
+            android:textAlignment="center"
+            android:background="@color/dark_yellow"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnConvertCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="@string/convert_currency"
+            android:onClick="displayResponseOnClick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittextAmount" />
+
+        <EditText
+            android:id="@+id/edittextAmount"
+            android:layout_width="208dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="@string/amount"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/btnConvertCurrency"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner10" />
+
+        <Spinner
+            android:id="@+id/spinner9"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:entries="@array/Currencies"
+            android:gravity="center|center_vertical"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFxMarket" />
+
+        <Spinner
+            android:id="@+id/spinner10"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/Currencies"
+            android:gravity="center|center_vertical"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/edittextAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner9" />
 
 
-    <EditText
-        android:id="@+id/editTextAustralianDollar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="#ECEEE8"
-        android:hint="@string/australian_dollar"
-        android:padding="10dp" />
-
-    <EditText
-        android:id="@+id/editTextEuro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="#ECEEE8"
-        android:hint="@string/euro"
-        android:padding="10dp" />
-
-    <EditText
-        android:id="@+id/editTextBritishPound"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="#ECEEE8"
-        android:hint="@string/british_pound_sterling"
-        android:padding="10dp" />
-
-    <EditText
-        android:id="@+id/editTextJapaniesYen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="#ECEEE8"
-        android:hint="@string/japanese_yen"
-        android:padding="10dp" />
-
-    <Button
-        android:id="@+id/btnFxRate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/submit_fxrate" />
-
-
-
-
-</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

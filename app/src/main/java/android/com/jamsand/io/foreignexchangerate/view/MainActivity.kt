@@ -1,5 +1,6 @@
-package android.com.jamsand.io.foreignexchangerate
+package android.com.jamsand.io.foreignexchangerate.view
 
+import android.com.jamsand.io.foreignexchangerate.R
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
