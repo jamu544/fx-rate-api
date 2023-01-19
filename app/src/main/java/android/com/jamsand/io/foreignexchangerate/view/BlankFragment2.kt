@@ -86,17 +86,10 @@ class BlankFragment2 : Fragment() {
         val restApi = RestApi.getInstance().getExchangeRateResults(api_key,from, to, amount)
 
         restApi.enqueue(object : Callback<ExchangeRate>{
-            /**
-             * Invoked for a received HTTP response.
-             *
-             *
-             * Note: An HTTP response may still indicate an application-level failure such as a 404 or 500.
-             * Call [Response.isSuccessful] to determine if the response indicates success.
-             */
             override fun onResponse(call: Call<ExchangeRate>, response: Response<ExchangeRate>) {
 
                 if (response.isSuccessful){
-                    binding.textViewPrice.text = response.body()?.price
+                    binding.textViewPrice.text = response.body()?.price.toString()
                     binding.textViewTimeStamp.text = response.body()?.timestamp
                     binding.textViewTotal.text = response.body()?.total
                     binding.textViewFromCurrency.text = response.body()?.from
@@ -109,12 +102,7 @@ class BlankFragment2 : Fragment() {
                     Log.i("response from Server 2 ",response.body().toString())
                 }
             }
-
-            /**
-             * Invoked when a network exception occurred talking to the server or when an unexpected exception
-             * occurred creating the request or processing the response.
-             */
-            override fun onFailure(call: Call<ExchangeRate>, t: Throwable) {
+     override fun onFailure(call: Call<ExchangeRate>, t: Throwable) {
                 t.message?.let { Log.d("FAILURE", it.toString()) }
             }
 

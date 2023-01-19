@@ -6,6 +6,7 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Headers
 import retrofit2.http.Query
 
 interface RestApi {
@@ -22,7 +23,9 @@ interface RestApi {
 //    ("from") from: String,("amount") amount: String):Call<ExchangeRate>
  //   @Headers("Content-Type: application/json")
 //    @Headers("api_key:KPohBD8rGCsg7DRE3o6t")
-    @GET("apiconvert/?api_key=api_key")
+
+    @Headers("Content-Type: application/json")
+    @GET("/apiconvert")
     fun getExchangeRateResults(@Query("api_key") api_key: String,
        @Query("from") from:String,
        @Query("to") to:String,
