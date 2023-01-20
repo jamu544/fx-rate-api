@@ -52,7 +52,7 @@ class BlankFragment : Fragment() {
         binding.btnConvertCurrency.setOnClickListener {
 
             //create bundle to pass rateExchange details
-          //  val bundle = bundleOf("currency" to binding.edittextAmount.text.toString())
+
             val bundle2 = Bundle()
             bundle2.putString("from","EUR")
             bundle2.putString("to","SEK")
