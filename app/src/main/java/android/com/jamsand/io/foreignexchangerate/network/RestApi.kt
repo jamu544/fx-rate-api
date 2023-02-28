@@ -10,20 +10,6 @@ import retrofit2.http.Headers
 import retrofit2.http.Query
 
 interface RestApi {
-// Key = KPohBD8rGCsg7DRE3o6t
-//    @GET("data/2.5/weather?")
-//    fun getCurrentWeatherData(
-//        @Query("lat") lat: String?,
-//        @Query("lon") lon: String?,
-//        @Query("APPID") app_id: String?
-//    ): Call<WeatherResponse?>?
-
-
-//    fun getExchangeRateResults(@Path("to") to: String,
-//    ("from") from: String,("amount") amount: String):Call<ExchangeRate>
- //   @Headers("Content-Type: application/json")
-//    @Headers("api_key:KPohBD8rGCsg7DRE3o6t")
-
     @Headers("Content-Type: application/json")
     @GET("/apiconvert")
     fun getExchangeRateResults(@Query("api_key") api_key: String,
